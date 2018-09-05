@@ -1,4 +1,11 @@
 /* Put your styles and imports here */
+
+@import "./styles/normalize.css";
+@import "./styles/skeleton.css";
+@import "./styles/skeleton-ext.css";
+@import "./styles/tomorrow-night-eighties.min.css";
+@import "./styles/normalize.css";
+
 body {
 	color: #fff;
 	background: #1d1f20;
