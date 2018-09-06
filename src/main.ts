@@ -50,6 +50,17 @@ const projector = new Projector();
 projector.setProperties({ registry });
 projector.append();
 
+window.onhashchange = function() {
+    window.requestAnimationFrame(function() {
+        new Masonry('.grid', {
+            fitWidth: true,
+            itemSelector: '.grid-item',
+            percentPosition: true
+        });
+    });
+}
+
+// Initial load if we are first navigated to one with a grid.
 new Masonry('.grid', {
     fitWidth: true,
     itemSelector: '.grid-item',

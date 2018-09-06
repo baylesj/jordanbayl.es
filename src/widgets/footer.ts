@@ -8,10 +8,22 @@ function createCopyrightStatement(): string {
     return `Copyright © ${DateObject.now().year} Jordan Bayles`;
 }
 
+function createGithubLink(): VNode {
+    return v("a", { href: "https://github.com/baylesj/jordanbayl.es" }, [ "GitHub" ]);
+}
+
+function createFooterNode(): VNode {
+    return v('em', {}, [
+        createCopyrightStatement(),
+        ". Open source on ",
+        createGithubLink()
+    ]);
+}
+
 function createFooter(): VNode {
     return v('footer', {}, [
         v('div', { classes: 'container' }, [
-            v('em', {}, [createCopyrightStatement()])
+            createFooterNode()
         ])
     ]);
 }

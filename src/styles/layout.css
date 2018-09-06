@@ -1,6 +1,29 @@
-html, body {
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Libre+Franklin');
+
+html, body > div {
+    font-family: 'Libre Franklin', sans-serif;
+    /*background: #EFE0B9;*/
+
+    /*
+    color: #fff;
+    background: #1d1f20;
+    */
+
+    background: #fafafa;
     height: 100%;
     margin: 0;
+}
+
+.navbar .navbar-link, .fancy {
+    font-family: 'Libre Baskerville', serif;
+    /*
+    background: #643B0F;
+    color: #EFE0B9;
+    */
+}
+
+.navbar-link {
+    font-size: 1em;
 }
 
 #wrap {
