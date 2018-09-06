@@ -1,0 +1,1 @@
+dojo build --mode dist
