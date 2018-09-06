@@ -1,38 +1,19 @@
+import { Link } from '@dojo/framework/routing/Link';
+
 import WidgetBase from '@dojo/framework/widget-core/WidgetBase';
 import { v } from '@dojo/framework/widget-core/d';
 import { VNode } from '@dojo/framework/widget-core/interfaces';
+import { w } from '@dojo/framework/widget-core/d';
 
-class NavbarItem {
-    constructor(text: string, href: string) {
-        this.text = text;
-        this.href = href;
-    }
-
-    text: string;
-    href: string;
-}
-
-const navbarItems: NavbarItem[] = [
-    { text: 'Home', href: '#' },
-    { text: 'About', href: '#' },
-    { text: 'Photography', href: '#' },
-    { text: 'Projects', href: '#' }
-];
-
-function createNodeFromNavbarItem(item: NavbarItem): VNode {
-    return v('li', { classes: 'navbar-item' }, [
-        v('a', { classes: 'navbar-link', href: item.href }, [ item.text ])
-    ]);
-}
-
-function createNavbarItems(): VNode[] {
-    return navbarItems.map(createNodeFromNavbarItem);
-}
-
-function createNavbar() {
+function createNavbar(): VNode {
     return v('nav', { classes: 'navbar' }, [
         v('div', { classes: 'container' }, [
-            v('ul', { classes: 'navbar-list' }, createNavbarItems())
+            v('ul', { classes: 'navbar-list' }, [
+                w(Link, { to: 'home', classes: 'navbar-link' }, [ 'Home' ]),
+                w(Link, { to: 'about', classes: 'navbar-link' }, [ 'About' ]),
+                w(Link, { to: 'photography', classes: 'navbar-link' }, [ 'Photography' ]),
+                w(Link, { to: 'projects', classes: 'navbar-link' }, [ 'Projects' ])
+            ]),
         ])
     ]);
 }

@@ -5,6 +5,7 @@
 @import "./styles/skeleton-ext.css";
 @import "./styles/tomorrow-night-eighties.min.css";
 @import "./styles/normalize.css";
+@import "./styles/layout.css";
 
 body {
 	color: #fff;

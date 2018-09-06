@@ -1,12 +1,61 @@
 import { ProjectorMixin } from '@dojo/framework/widget-core/mixins/Projector';
-import Navbar from './widgets/navbar';
+import Body from './widgets/body';
 
-// Create a projector to convert the virtual DOM produced by the application into the rendered page.
-// For more information on starting up a Dojo 2 application, take a look at
-// https://dojo.io/tutorials/002_creating_an_application/
-const Projector = ProjectorMixin(Navbar);
+import { Registry } from '@dojo/framework/widget-core/Registry';
+import { registerRouterInjector } from '@dojo/framework/routing/RouterInjector';
+
+//import * as $ from 'jquery';
+import * as Masonry from 'masonry-layout';
+
+const routingConfig = [
+	{
+		path: 'directory',
+		outlet: 'directory',
+		children: [
+			{
+				path: '{filter}',
+				outlet: 'filter'
+			}
+		]
+	},
+	{
+		path: 'about',
+		outlet: 'about'
+	},
+	{
+		path: 'home',
+		outlet: 'home'
+	},
+	{
+		path: 'photography',
+		outlet: 'photography'
+	},
+	{
+		path: 'projects',
+		outlet: 'projects'
+	},
+	{
+		path: '/',
+		outlet: 'home',
+		defaultRoute: true
+	}
+];
+
+
+const registry = new Registry();
+registerRouterInjector(routingConfig, registry);
+
+const Projector = ProjectorMixin(Body);
 const projector = new Projector();
 
-// By default, append() will attach the rendered content to document.body.  To insert this application
-// into existing HTML content, pass the desired root node to append().
+projector.setProperties({ registry });
 projector.append();
+
+new Masonry('.grid', {
+	itemSelector: '.grid-item',
+	columnWidth: 50
+});
+
+//$(".grid").masonry({
+//	itemSelector: '.grid-item',
+//});
