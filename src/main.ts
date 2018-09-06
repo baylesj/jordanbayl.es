@@ -4,7 +4,6 @@ import Body from './widgets/body';
 import { Registry } from '@dojo/framework/widget-core/Registry';
 import { registerRouterInjector } from '@dojo/framework/routing/RouterInjector';
 
-//import * as $ from 'jquery';
 import * as Masonry from 'masonry-layout';
 
 const routingConfig = [
@@ -52,10 +51,7 @@ projector.setProperties({ registry });
 projector.append();
 
 new Masonry('.grid', {
-	itemSelector: '.grid-item',
-	columnWidth: 50
+    fitWidth: true,
+    itemSelector: '.grid-item',
+    percentPosition: true
 });
-
-//$(".grid").masonry({
-//	itemSelector: '.grid-item',
-//});

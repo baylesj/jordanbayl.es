@@ -4,6 +4,7 @@
   "dependencies": {
     "@dojo/framework": "~3.0.0",
     "@types/masonry-layout": "^4.2.0",
+    "ajax": "0.0.4",
     "isotope-layout": "^3.0.6",
     "jquery": "^3.3.1",
     "masonry-layout": "^4.2.2",
