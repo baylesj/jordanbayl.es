@@ -3,7 +3,7 @@ import { v } from '@dojo/framework/widget-core/d';
 
 export class About extends WidgetBase {
 	protected render() {
-		return v('div', {}, ["I am about stuff"]);
+		return v('div', { classes: 'widget' }, ["I am about stuff"]);
 	}
 }
 

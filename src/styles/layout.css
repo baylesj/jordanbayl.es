@@ -1,25 +1,53 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Libre+Franklin');
 
-html, body > div {
+html, body {
     font-family: 'Libre Franklin', sans-serif;
-    /*background: #EFE0B9;*/
 
-    /*
-    color: #fff;
-    background: #1d1f20;
-    */
-
-    background: #fafafa;
+    background: #fcfcfc;
     height: 100%;
     margin: 0;
+    text-align: center;
+
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+.widget {
+    max-width: 90%;
+    margin: auto;
+    padding-top: 2em;
+}
+
+.widget-body {
+    text-align: left;
+}
+
+.docs-header {
+    font-size: 1.8rem;
+}
+
+.social-media-icon {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.social-media-icons {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    margin: auto;
+}
+
+.subtitle {
+    max-width: 40%;
+    margin: auto;
+    font-size: 1.2em;
+    font-weight: 100;
+    font-style: italic;
 }
 
 .navbar .navbar-link, .fancy {
     font-family: 'Libre Baskerville', serif;
-    /*
-    background: #643B0F;
-    color: #EFE0B9;
-    */
 }
 
 .navbar-link {
@@ -27,7 +55,6 @@ html, body > div {
 }
 
 #wrap {
-    padding: 10px;
     min-height: -webkit-calc(100% - 100px);     /* Chrome */
     min-height: -moz-calc(100% - 100px);     /* Firefox */
     min-height: calc(100% - 100px);     /* native */

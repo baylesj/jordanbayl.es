@@ -1,18 +1,33 @@
 .grid {
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: auto auto 1fr 1fr 1fr auto auto;
+    grid-gap: 10px;
+    height: calc(100vh - 10px);
 }
 
-.grid-item {
+.item {
     border-radius: 5px;
     background: #EEE;
     padding: 5px;
     margin: 10px;
 }
 
-.grid-sizer, .grid-item {
-    width: 18%;
+
+.photothumb {
+    width: 100%;
 }
 
-.grid-item--width2 {
-    width: 36%;
+.desc {
+    padding: 10px 10px 5px 10px;
+}
+
+.desc img {
+    width: 50%;
+    margin: 0 10px 10px 0;
+    float: left;
+}
+
+.desc p {
+    margin-bottom: 10px;
 }

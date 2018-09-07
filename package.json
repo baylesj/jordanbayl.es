@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "dependencies": {
     "@dojo/framework": "~3.0.0",
+    "@types/imagesloaded": "^4.1.1",
     "@types/masonry-layout": "^4.2.0",
     "ajax": "0.0.4",
+    "imagesloaded": "^4.1.4",
     "isotope-layout": "^3.0.6",
     "jquery": "^3.3.1",
     "masonry-layout": "^4.2.2",

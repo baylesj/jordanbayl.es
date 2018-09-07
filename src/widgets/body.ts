@@ -11,7 +11,7 @@ import Footer from './footer';
 
 export class Body extends WidgetBase {
 	protected render() {
-        return v('div', { classes: 'container, wrap' }, [
+        return v('div', { classes: 'wrap' }, [
             w(Navbar, {}),
             w(AboutOutlet, {}),
             w(HomeOutlet, {}),

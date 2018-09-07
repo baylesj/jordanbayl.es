@@ -26,16 +26,34 @@ function getPhotos(): PhotoMetadata[] {
 function buildImageElement(metadata: PhotoMetadata): VNode {
     const url: string = `${staticFolderPath}${metadata.name}`;
 
-    return v('div', { classes: 'row'}, [
-        v('a', { href: url, target: '_blank' }, [
-            v('img', { classes: 'grid-item value-img', src: url }, [ `" ${metadata.description} ` ]),
+    return v('div', { classes: 'item photo'}, [
+        v('div', { classes: 'content' }, [
+            v('a', { href: url, target: '_blank', classes: '' }, [
+                v('img', { classes: 'photothumb', src: url })
+            ]),
+            v('div', { classes: 'desc' }, [ `${metadata.description}` ]),
+        ])
+    ]);
+}
+
+function getIntro(): VNode {
+    return v('div', { id: '', classes: 'intro' }, [
+        v('p', {}, [
+            "One of my biggest interests over the past few years has been taking photos " +
+            "of my experiences. I've been fortunate enough to travel to new places, see " +
+            "new things, and make amazing experiences.",
+            //v("br", {}),
+            "Here are some of my current favorites:"
         ])
     ]);
 }
 
 export class Photography extends WidgetBase {
 	protected render() {
-        return v('div', {}, [
+        return v('div', { classes: 'widget' }, [
+            v('div', { classes: 'article' }, [
+                getIntro()
+            ]),
             v('div', { classes: 'grid' },
                 getPhotos().map(buildImageElement)
             )

@@ -15,7 +15,7 @@ function createGithubLink(): VNode {
 function createFooterNode(): VNode {
     return v('em', {}, [
         createCopyrightStatement(),
-        ". Open source on ",
+        ". This site is open source on ",
         createGithubLink()
     ]);
 }

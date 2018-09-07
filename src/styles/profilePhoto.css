@@ -1,0 +1,9 @@
+.profile-photo {
+    border-radius: 40px;
+    background: #EEE;
+    padding: 5px;
+    margin: 10px;
+    width: 200px;
+
+    box-shadow: 5px 5px 5px 5px #DDD;
+}
