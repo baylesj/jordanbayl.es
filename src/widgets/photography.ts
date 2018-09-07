@@ -3,11 +3,10 @@ import { v } from '@dojo/framework/widget-core/d';
 import { VNode } from '@dojo/framework/widget-core/interfaces';
 
 import '../styles/photography.css';
+import { Config } from '../config';
 
-var photos = require('../photos/photos-metadata.json');
-
-// TODO: move to config for dev/prod
-const staticFolderPath = "https://jordanbayl.es/static/";
+const photos = require('../photos/photos-metadata.json');
+const config: Config = require('../config.json');
 
 class PhotoMetadata {
     constructor(name: string, description: string) {
@@ -24,7 +23,7 @@ function getPhotos(): PhotoMetadata[] {
 }
 
 function buildImageElement(metadata: PhotoMetadata): VNode {
-    const url: string = `${staticFolderPath}${metadata.name}`;
+    const url: string = `${config.staticFolder}${metadata.name}`;
 
     return v('div', { classes: 'item photo'}, [
         v('div', { classes: 'content' }, [

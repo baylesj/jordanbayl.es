@@ -3,7 +3,6 @@ import { v } from '@dojo/framework/widget-core/d';
 import { w } from '@dojo/framework/widget-core/d';
 
 import Navbar from './navbar';
-import AboutOutlet from '../outlets/aboutOutlet';
 import HomeOutlet from '../outlets/homeOutlet';
 import PhotographyOutlet from '../outlets/photographyOutlet';
 import ProjectsOutlet from '../outlets/projectsOutlet';
@@ -13,7 +12,6 @@ export class Body extends WidgetBase {
 	protected render() {
         return v('div', { classes: 'wrap' }, [
             w(Navbar, {}),
-            w(AboutOutlet, {}),
             w(HomeOutlet, {}),
             w(PhotographyOutlet, {}),
             w(ProjectsOutlet, {}),
