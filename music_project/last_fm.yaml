@@ -1,0 +1,8 @@
+artist:
+  endpoint: https://ws.audioscrobbler.com/2.0/?method={0}&artist={1}&api_key={2}&format=json
+  search: artist.search
+  getTags: artist.getTags
+  getInfo: artist.getInfo
+  getTopTracks: artist.getTopTracks
+  getTopTags: artist.getTopTags
+

@@ -5,7 +5,7 @@
 }
 
 .icon-xl {
-    width: 80px;
+    width: 60px;
 }
 
 .social-media-icons {
@@ -13,4 +13,5 @@
     padding-bottom: 20px;
     text-align: center;
     margin: auto;
+    width: 500px;
 }

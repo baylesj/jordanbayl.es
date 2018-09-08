@@ -5,7 +5,7 @@ import { VNode } from '@dojo/framework/widget-core/interfaces';
 import { DateObject } from '@dojo/framework/core/DateObject';
 
 function createCopyrightStatement(): string {
-    return `Copyright © ${DateObject.now().year} Jordan Bayles`;
+    return `Copyright \u00A9 ${DateObject.now().year} Jordan Bayles`;
 }
 
 function createGithubLink(): VNode {
@@ -14,9 +14,11 @@ function createGithubLink(): VNode {
 
 function createFooterNode(): VNode {
     return v('em', {}, [
-        createCopyrightStatement(),
-        ". This site is open source on ",
-        createGithubLink()
+        v('div', { classes: 'six columns merge-right' }, [createCopyrightStatement(), ". "]),
+        v('div', { classes: 'six columns merge-left' }, [
+            "This site is open source on ",
+            createGithubLink()
+        ])
     ]);
 }
 

@@ -16,7 +16,7 @@ html, body {
     max-width: 90%;
     margin: auto;
     padding-top: 2em;
-    padding-bottom: 10em;
+    padding-bottom: 5em;
 }
 
 .text-widget {
@@ -51,6 +51,16 @@ html, body {
     min-height: -webkit-calc(100% - 100px);     /* Chrome */
     min-height: -moz-calc(100% - 100px);     /* Firefox */
     min-height: calc(100% - 100px);     /* native */
+}
+
+.merge-left {
+    text-align: left;
+    margin-left: 0px;
+}
+
+.merge-right {
+    text-align: right;
+    margin-right: 0px;
 }
 
 footer {

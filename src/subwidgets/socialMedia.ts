@@ -34,12 +34,15 @@ const socialMediaAccounts: SocialMediaAccount[] = [
 
 export default function getSocialMediaLinks(): VNode {
 	return v('div', { id: 'contact-me', classes: "widget-body" }, [
-		v('div', { classes: 'social-media-icons container' },
-			socialMediaAccounts.map(account => {
-				return v('a', { href: account.profileUrl }, [
-					v('img', { classes: `social-media-icon ${account.classes}`, src: account.iconName }, [ account.name ])
-				]);
-			})
+		v('div', { classes: 'social-media-icons' }, [
+            v('div', { classes: '' },
+                socialMediaAccounts.map(account => {
+                    return v('a', { href: account.profileUrl }, [
+                        v('img', { classes: `social-media-icon ${account.classes}`, src: account.iconName }, [ account.name ])
+                    ]);
+                })
+            )
+        ]
 		)
 	]);
 }
