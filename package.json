@@ -1,21 +1,28 @@
 {
   "name": "jordanbayl.es",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "license": "MIT",
   "dependencies": {
-    "@dojo/framework": "~3.0.0",
-    "@types/imagesloaded": "^4.1.1",
-    "@types/masonry-layout": "^4.2.0",
+    "@dojo/framework": "~7.0.5",
+    "@types/imagesloaded": "^4.1.2",
+    "@types/masonry-layout": "^4.2.2",
     "ajax": "0.0.4",
     "imagesloaded": "^4.1.4",
     "isotope-layout": "^3.0.6",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.1",
     "masonry-layout": "^4.2.2",
-    "tslib": "~1.8.1"
+    "node-fetch": "^2.6.1",
+    "stylelint": "^13.7.2",
+    "tslib": "~2.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/baylesj/jordanbayl.es.git"
   },
   "devDependencies": {
-    "@dojo/cli-build-app": "~3.0.0",
-    "@dojo/cli-test-intern": "~3.0.0",
-    "@types/node": "~9.6.5",
-    "typescript": "~2.6.1"
+    "@dojo/cli-build-app": "^7.0.3",
+    "@dojo/cli-test-intern": "~7.0.0",
+    "@types/node": "^14.14.6",
+    "typescript": "~4.0.5"
   }
 }
