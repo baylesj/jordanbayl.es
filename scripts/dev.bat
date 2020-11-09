@@ -1,1 +1,0 @@
-dojo build --mode dev --watch memory --serve
